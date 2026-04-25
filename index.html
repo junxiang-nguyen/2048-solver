@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jun's 2048 Solver</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <h1>Jun's 2048 Solver</h1>
+      <p>hi, good luck with your game!</p>
+    </header>
+
+    <section class="controls">
+      <label>
+        Rows
+        <input id="rowsInput" type="number" min="2" max="8" value="4" />
+      </label>
+
+      <label>
+        Columns
+        <input id="colsInput" type="number" min="2" max="8" value="4" />
+      </label>
+
+      <label>
+        Tile Value
+        <select id="tileValueInput">
+          <option value="0">0 (clear)</option>
+          <option value="2" selected>2</option>
+          <option value="4">4</option>
+          <option value="8">8</option>
+          <option value="16">16</option>
+          <option value="32">32</option>
+          <option value="64">64</option>
+          <option value="128">128</option>
+          <option value="256">256</option>
+          <option value="512">512</option>
+          <option value="1024">1024</option>
+          <option value="2048">2048</option>
+        </select>
+      </label>
+
+      <button id="resizeBtn">Resize Board</button>
+      <button id="clearBtn">Clear Board</button>
+      <button id="analyzeBtn">Analyze Board</button>
+    </section>
+
+    <section class="move-controls">
+      <button id="moveUpBtn">Up</button>
+      <button id="moveLeftBtn">Left</button>
+      <button id="moveRightBtn">Right</button>
+      <button id="moveDownBtn">Down</button>
+      <button id="confirmBtn">Confirm New Tile</button>
+    </section>
+
+    <section class="status-panel">
+      <p><strong>Phase:</strong> <span id="phaseText">edit</span></p>
+      <p><strong>Status:</strong> <span id="statusText">Edit the board or analyze it.</span></p>
+      <p><strong>Score gained on last move:</strong> <span id="scoreText">0</span></p>
+      <p><strong>Suggestion:</strong> <span id="bestMoveText">Not analyzed yet.</span></p>
+      <p><strong>Why:</strong> <span id="reasonText">The program has not evaluated the current board yet.</span></p>
+    </section>
+
+    <section class="board-panel">
+      <div id="board" class="board"></div>
+    </section>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #faf8ef;
+  color: #333;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.topbar {
+  margin-bottom: 20px;
+}
+
+.topbar h1 {
+  margin: 0 0 8px;
+}
+
+.topbar p {
+  margin: 0;
+  color: #666;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.controls input,
+.controls select,
+.controls button {
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.controls button {
+  cursor: pointer;
+  border: 1px solid #bbb;
+  background: white;
+  border-radius: 8px;
+}
+
+.board-panel {
+  background: #bbada0;
+  padding: 12px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.board {
+  display: grid;
+  gap: 10px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background: #cdc1b4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell.empty {
+  color: transparent;
+}
+
+.cell.v2 { background: #eee4da; color: #776e65; }
+.cell.v4 { background: #ede0c8; color: #776e65; }
+.cell.v8 { background: #f2b179; color: #f9f6f2; }
+.cell.v16 { background: #f59563; color: #f9f6f2; }
+.cell.v32 { background: #f67c5f; color: #f9f6f2; }
+.cell.v64 { background: #f65e3b; color: #f9f6f2; }
+.cell.v128 { background: #edcf72; color: #f9f6f2; font-size: 20px; }
+.cell.v256 { background: #edcc61; color: #f9f6f2; font-size: 20px; }
+.cell.v512 { background: #edc850; color: #f9f6f2; font-size: 20px; }
+.cell.v1024 { background: #edc53f; color: #f9f6f2; font-size: 18px; }
+.cell.v2048 { background: #edc22e; color: #f9f6f2; font-size: 18px; }
+
+@media (max-width: 600px) {
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+}
+
+.move-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.move-controls button {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #bbb;
+  background: white;
+  border-radius: 8px;
+}
+
+.status-panel {
+  margin-bottom: 18px;
+  padding: 12px 16px;
+  background: #f1ece4;
+  border-radius: 10px;
+}
+
+.status-panel p {
+  margin: 6px 0;
+}
